@@ -1,0 +1,41 @@
+{
+  "name": "@stretto/react-sandbox",
+  "version": "1.0.0",
+  "private": true,
+  "packageManager": "pnpm@8.6.0",
+  "scripts": {
+    "build": "pnpm clean && tsc && vite build",
+    "clean": "rimraf --impl=windows ./dist",
+    "dev": "vite --force",
+    "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@fontsource/roboto": "^5.0.8",
+    "@types/react": "^18.2.37",
+    "@types/react-dom": "^18.2.15",
+    "@typescript-eslint/eslint-plugin": "^6.10.0",
+    "@typescript-eslint/parser": "^6.10.0",
+    "@vanilla-extract/css": "^1.14.0",
+    "@vanilla-extract/vite-plugin": "^3.9.0",
+    "@vitejs/plugin-react": "^4.1.1",
+    "@vitejs/plugin-react-swc": "^3.4.1",
+    "eslint": "^8.53.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-jsx-a11y": "^6.8.0",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.4",
+    "prettier": "^3.0.3",
+    "rimraf": "^5.0.5",
+    "typescript": "^5.0.2",
+    "vite": "^4.5.0",
+    "vite-tsconfig-paths": "^4.2.1"
+  },
+  "dependencies": {
+    "@stretto/cds-scss": "workspace:^",
+    "@stretto/cds-ui": "workspace:^",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}

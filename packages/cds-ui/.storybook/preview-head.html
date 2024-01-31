@@ -1,0 +1,89 @@
+<script>
+  window.global = window;
+</script>
+<style>
+  body * {
+    box-sizing: border-box;
+  }
+
+  .sbdocs.sbdocs-wrapper blockquote {
+    font-family: var(--cds-font-family-base);
+    border-left: 4px solid var(--cds-color-teal-20);
+  }
+
+  .sbdocs.sbdocs-wrapper code {
+    font-family: var(--cds-font-family-base);
+    font-size: 13px;
+    line-height: 1;
+    padding: 3px;
+    color: var(--cds-text-dark);
+    background-color: var(--cds-color-neutral-10);
+    border: 1px solid var(--cds-color-neutral-20);
+  }
+
+  #tooltips-container {
+    position: relative;
+    white-space: pre-wrap;
+    z-index: 99999999;
+    max-width: 50%;
+  }
+
+  .sbdocs.sbdocs-wrapper,
+  .sbdocs.sbdocs-content {
+    background: var(--cds-color-white);
+  }
+
+  .sbdocs.sbdocs-p {
+    color: var(--cds-color-gray);
+  }
+
+  .sbdocs .docs-story {
+    border: var(--cds-color-gray);
+  }
+
+  .sbdocs {
+    font-family: var(--cds-font-family-base);
+    color: var(--cds-color-neutral-100);
+  }
+
+  .sbdocs ul li a {
+    color: var(--cds-color-teal-50);
+  }
+
+  #docs-root .docblock-argstable {
+    border: 1px solid var(--cds-color-teal-50);
+  }
+
+  #docs-root .docblock-argstable tr th {
+    color: var(--sb-primary-text-color);
+  }
+
+  #docs-root .docblock-argstable tr td {
+    color: var(--cds-color-neutral-100);
+    background: var(--cds-color-gray);
+  }
+
+  #docs-root .docblock-code-toggle {
+    cursor: pointer;
+    background-color: white;
+    border: 1px solid var(--cds-color-teal-50);
+    color: var(--cds-color-teal-50);
+  }
+
+  #docs-root .docblock-code-toggle.docblock-code-toggle--expanded {
+    background-color: var(--cds-color-teal-50);
+  }
+
+  #docs-root .docblock-code-toggle:hover {
+    background-color: var(--cds-color-teal-50);
+  }
+
+  .os-content button:hover {
+    background-color: rgba(2, 155, 151, 0.1);
+    color: var(--cds-color-teal-50);
+  }
+
+  .os-content button:hover svg {
+    color: var(--cds-color-teal-50);
+  }
+</style>

@@ -1,0 +1,65 @@
+@use 'sass:map';
+@use '../foundations' as *;
+
+// * The Flow utility class brings back in default spacing between elements.
+// * Doesn't add any to the top of the first child, or to the bottom of the bottom child.
+// * Makes it easy to have consistent spacing all the time.
+// * The custom property var(--flow-spacer, 1rem) here makes it easy to set a custom size, but will default to 1rem of space.
+
+.flow > *:where(:not(:first-child)) {
+  margin-top: var(--flow-spacer, 1rem);
+}
+
+// Spacing utility classes based on bootstrap 4's naming conventions
+
+@each $space-name, $space-value in $space {
+
+  .mt {
+    &-#{$space-name} {
+      margin-top: $space-value;
+    }
+  }
+  .mb {
+    &-#{$space-name} {
+      margin-bottom: $space-value;
+    }
+  }
+  .mx {
+    &-#{$space-name} {
+      margin-inline: $space-value;
+    }
+  }
+  .my {
+    &-#{$space-name} {
+      margin-block: $space-value;
+    }
+  }
+  .pt {
+    &-#{$space-name} {
+      padding-top: $space-value;
+    }
+  }
+  .pb {
+    &-#{$space-name} {
+      padding-bottom: $space-value;
+    }
+  }
+  .px {
+    &-#{$space-name} {
+      padding-inline: $space-value;
+    }
+  }
+  .py {
+    &-#{$space-name} {
+      padding-block: $space-value;
+    }
+  }
+}
+
+.mx-auto {
+  margin-inline: auto;
+}
+
+.push-right {
+  margin-left: auto;
+}

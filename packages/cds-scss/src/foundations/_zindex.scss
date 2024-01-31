@@ -1,0 +1,11 @@
+@use 'tokens' as *;
+
+// Stretto z-index aka levels
+$cds-z-index-content: var(--cds-z-index-content);
+$cds-z-index-data-grid: var(--cds-z-index-data-grid);
+$cds-z-index-header: var(--cds-z-index-header);
+$cds-z-index-menu: var(--cds-z-index-menu);
+$cds-z-index-navigation: var(--cds-z-index-navigation);
+$cds-z-index-mask: var(--cds-z-index-mask);
+$cds-z-index-modal: var(--cds-z-index-modal);
+$cds-z-index-toast: var(--cds-z-index-toast);

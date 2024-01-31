@@ -1,0 +1,93 @@
+@use '../foundations' as *;
+
+// Base styling for general HTML Elements
+
+body {
+  background-color: $cds-color-gray;
+  color: $cds-text-color-dark;
+  font-family: $cds-font-family-base;
+  font-size: $cds-font-size-body;
+  font-weight: $cds-font-weight-regular;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: $cds-font-family-monospace;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-family: $cds-font-family-base;
+  font-weight: $cds-font-weight-regular;
+  line-height: $cds-font-line-height-headings;
+}
+
+h1,
+.h1 {
+  font-size: $cds-font-size-h1;
+}
+
+h2,
+.h2 {
+  font-size: $cds-font-size-h2;
+}
+
+h3,
+.h3 {
+  font-size: $cds-font-size-h3;
+}
+
+h4,
+.h4 {
+  font-size: $cds-font-size-h4;
+}
+
+h5,
+.h5 {
+  font-size: $cds-font-size-h5;
+}
+
+h6,
+.h6 {
+  font-size: $cds-font-size-h6;
+}
+
+p {
+  font-family: $cds-font-family-body;
+  font-size: $cds-font-size-body;
+  color: $cds-text-color-dark;
+  line-height: $cds-font-line-height-body;
+  margin-block-end: $cds-space-2;
+}
+
+::-moz-focus-inner {
+  border: 0;
+}
+
+@media (hover: none) {
+  .css-1n73kyq-MuiInputBase-root-MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline {
+    border-color: var(--cds-color-neutral-20);
+  }
+}
+
+.css-1n73kyq-MuiInputBase-root-MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+  border: 1px solid var(--cds-color-teal-50);
+  outline: 2px solid transparent;
+  box-shadow: 0px 0px 0px 2px var(--cds-color-teal-20), 0px 0px 0px 2px var(--cds-color-teal-20);
+}
+
+.css-1n73kyq-MuiInputBase-root-MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline {
+  border-color: var(--cds-color-neutral-20);
+}

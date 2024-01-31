@@ -1,0 +1,64 @@
+import { Icon } from '@iconify/react';
+import { Meta } from '@storybook/blocks';
+//import { Meta } from '@storybook/blocks';
+
+<Meta title="Getting Started/Developer Guide" name="Developer Guide" />
+
+# Getting Started
+
+## Developer Guide
+
+### IDE Setup (Optional)
+
+For a better developer experience, we recommend using the latest versions of
+Microsoft Visual Studio 2022 or Visual Studio Code. Reach out to your manager
+if you don&apos;t have it installed on your device.
+
+If you&apos;re already using Visual Studio/VS Code, follow these steps:
+
+1. Open VS/VS Code and navigate to the extension marketplace.
+2. Search and install the following plugins, or follow the links below to install them directly:
+
+   - [IntelliSense for CSS class names in HTML <Icon icon="mdi:open-in-new"/>](https://marketplace.visualstudio.com/items?itemName=Zignd.html-css-class-completion 'title')
+   - [CSS Var Complete <Icon icon="mdi:open-in-new"/>](https://marketplace.visualstudio.com/items?itemName=phoenisx.cssvar 'title')
+   - [Path IntelliSense <Icon icon="mdi:open-in-new"/>](https://marketplace.visualstudio.com/items?itemName=christian-kohler.path-intellisense 'title')
+   - [npm IntelliSense <Icon icon="mdi:open-in-new"/>](https://marketplace.visualstudio.com/items?itemName=christian-kohler.npm-intellisense 'title')
+
+### Installation
+
+To install `@stretto/cds-ui` in your project, run the following command:
+
+```
+npm install @stretto/cds-ui[version]
+```
+
+### Import Components
+
+Import the component from the library's root entry:
+
+```jsx
+// App.tsx
+import { Button } from '@stretto/cds-ui';
+```
+
+### Customizing Component Styling
+
+While the `@stretto/cds-ui` package does provide a set of styled components for **Debtor Attorney** applications, you may need to customize
+something to fit your project's specific needs. Before making any modifications,
+review the CDS guidelines and consider whether the changes align with the
+design system's styling principles.
+
+If necessary, reach out to the CDS UX Engineering team (nicholas.pino@stretto.com or barrett.grubbs@stretto.com) to propose an update to styling or introduce
+a new component/variant. Feel free to create and propose a new React Typescript component that follows best practices and the
+system's guidelines.
+
+### Maintaining Consistency
+
+One of the key benefits of a design system is ensuring consistency across
+all projects. As you build your React application using CDS components,
+try to follow best practices to ensure your UI is cohesive and meets CDS guidelines and industry standards.
+
+### What if I need a component that doesn't exist in CDS?
+
+If you are currently building with CDS React components and one isn't available for your needs,
+you can utilize MUI and apply the CDS styles package.

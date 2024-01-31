@@ -1,0 +1,33 @@
+import { Canvas, Controls, Meta } from '@storybook/blocks';
+import * as ProgressBarStories from './ProgressBar.stories';
+
+<Meta of={ProgressBarStories} />
+
+# ProgressBar
+
+The `<ProgrssBar/>` component is a visual indicator designed to
+display the progress of a task or process. It is typically used
+to give users feedback on the completion status of an operation,
+such as uploading a file, completing a form, or loading content.
+
+<br />
+
+<Canvas of={ProgressBarStories.Primary} />
+
+<br />
+
+## Features
+
+> Dynamic Progress: The component updates in real-time to reflect the current progress of the task.
+
+> Customizable Colors: Colors for the bar and background can be customized to match your application's theme.
+
+> Label Support: Optional label to display the progress percentage or status message.
+
+> Accessibility: The component is designed with accessibility in mind, ensuring it is screen-reader friendly.
+
+<br />
+
+### Component API
+
+<Controls />

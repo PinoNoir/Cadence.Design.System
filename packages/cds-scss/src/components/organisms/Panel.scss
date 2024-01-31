@@ -1,0 +1,47 @@
+@use '../../foundations' as *;
+@use '../../foundations' as *;
+
+// Default BCC Panel styling
+
+.bcc-panel {
+  background-color: $cds-color-white;
+  border-bottom: 1px solid $cds-border-color-default;
+  border-left: 1px solid $cds-border-color-default;
+  border-radius: $cds-border-radius-4;
+  border-right: 1px solid $cds-border-color-default;
+  border-top: 5px solid $cds-border-color-dark;
+  display: grid;
+
+  &-header {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $cds-space-16;
+    justify-content: space-between;
+    padding-block: $cds-space-24;
+    padding-inline: $cds-space-32;
+  }
+  &-body {
+    display: flex;
+    flex-wrap: wrap;
+    padding-inline: $cds-space-32;
+  }
+  &-footer {
+    border-top: 1px solid $cds-color-neutral-20;
+    display: flex;
+    flex-wrap: wrap;
+    gap: $cds-space-16;
+    justify-content: space-between;
+    padding-bottom: $cds-space-32;
+    padding-inline: $cds-space-32;
+    padding-top: $cds-space-24;
+  }
+  &-footer--no-border {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $cds-space-16;
+    justify-content: space-between;
+    padding-bottom: $cds-space-32;
+    padding-inline: $cds-space-32;
+    padding-top: $cds-space-24;
+  }
+}

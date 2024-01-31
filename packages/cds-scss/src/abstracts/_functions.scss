@@ -1,0 +1,26 @@
+@use 'sass:map';
+@use '../foundations' as *;
+
+@function font-size($font-size) {
+  @if map.has-key($font-sizes, $font-size) {
+    @return map.get($font-sizes, $font-size);
+  } @else {
+    @error '$font-sizes does not have that size!';
+  }
+}
+
+@function size($size) {
+  @if map.has-key($sizes, $size) {
+    @return map.get($sizes, $size);
+  } @else {
+    @error '$sizes does not have that size!';
+  }
+}
+
+@function space($space) {
+  @if map.has-key($spacing, $space) {
+    @return map.get($spacing, $space);
+  } @else {
+    @error '$spacing does not have that size!';
+  }
+}

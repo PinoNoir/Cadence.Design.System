@@ -1,0 +1,147 @@
+import { Meta, Typeset } from '@storybook/blocks';
+import { Icon } from '@iconify/react';
+
+<Meta title="Foundations/Typography" name="Typography" />
+
+<style>
+  {`
+    .docblock-typeset.sb-unstyled.css-lfk5jr {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 10px;
+        grid-auto-rows: minmax(50px, auto);
+        background-color: var(--cds-color-white);
+        align-items: center;
+    }
+    .css-1kojprk {
+        display: flex;
+        align-items: end;
+        min-width: 65px;
+        margin-inline-end: 20px;
+        font-size: 14px;
+    }
+`}
+</style>
+
+# CDS Typography
+
+> All of Stretto's digital products use `Roboto` as the primary font.
+
+> CDS text styles are split into 2 separate categories: Headings & Body along with several utility classes for color, sizing, weight, and line-height.
+
+## Installation
+
+> We recommend using the `@fontsource/roboto` package from [fontsource.org <Icon icon="mdi:open-in-new"/>](https://fontsource.org/fonts/roboto" 'title'). This allows you to self-host the fonts and use them in your project without any hassle.
+
+1. Install `Roboto` by running the following command:
+
+```
+npm install @fontsource/roboto
+```
+
+2. Import the fonts into your main entry file:
+
+```jsx
+// index.js
+import '@fontsource/roboto'; // Defaults to weight 400
+import '@fontsource/roboto/400.css'; // Specify weight
+import '@fontsource/roboto/400-italic.css'; // Specify weight and style
+```
+
+3. Reference the font in your CSS stylesheet.
+
+```jsx
+// styles.css
+body {
+  font-family: 'Roboto';
+}
+```
+
+## Typography Tokens
+
+Read more about using CSS custom properties [here <Icon icon="mdi:open-in-new"/>](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties" 'title').
+
+```css
+--cds-font-line-height-headings: 2;
+--cds-font-line-height-body: 1.5;
+--cds-font-line-height-condensed: 1.25;
+--cds-font-weight-bold: 700;
+--cds-font-weight-medium: 500;
+--cds-font-weight-regular: 400;
+--cds-font-weight-light: 300;
+--cds-font-size-xs: 0.625rem;
+--cds-font-size-sm: 0.75rem;
+--cds-font-size-label: 0.875rem;
+--cds-font-size-body: 0.875rem;
+--cds-font-size-h6: 0.75rem;
+--cds-font-size-h5: 0.875rem;
+--cds-font-size-h4: 1rem;
+--cds-font-size-h3: 1.125rem;
+--cds-font-size-h2: 1.5625rem;
+--cds-font-size-h1: 2rem;
+--cds-font-family-monospace: 'source-code-pro', 'Menlo', 'Monaco', 'Consolas', 'Courier New', monospace;
+--cds-font-family-headings: 'Roboto', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+--cds-font-family-body: 'Roboto', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+--cds-font-family-base: 'Roboto', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+```
+
+## Headings
+
+<Typeset
+  fontSizes={['2rem', '1.75rem', '1.5rem', '1.25rem', '1rem', '.875rem']}
+  fontWeight="300"
+  SampleText="Orchestrating success through innovative solutions."
+  fontFamily='"Roboto", "Helvetica Neue", Helvetica, Arial'
+/>
+
+## Body
+
+<Typeset
+  fontSizes={['.875rem']}
+  fontWeight="400"
+  SampleText="Orchestrating success through innovative solutions."
+  fontFamily='"Roboto", "Helvetica Neue", Helvetica, Arial'
+/>
+
+## CSS Custom Properties
+
+**Font Family**
+
+```css
+var(--cds-font-family-monospace: 'source-code-pro', 'Menlo', 'Monaco', 'Consolas', 'Courier New', monospace);
+var(--cds-font-family-headings: 'Roboto', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif);
+var(--cds-font-family-body: 'Roboto', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif);
+var(--cds-font-family-base: 'Roboto', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif);
+```
+
+**Font Weight**
+
+```css
+var(--cds-font-weight-bold: 700);
+var(--cds-font-weight-medium: 500);
+var(--cds-font-weight-regular: 400);
+var(--cds-font-weight-light: 300);
+```
+
+**Font Size**
+
+```css
+var(--cds-font-size-xs: 0.625rem);
+var(--cds-font-size-sm: 0.75rem);
+var(--cds-font-size-label: 0.875rem);
+var(--cds-font-size-body: 0.875rem);
+var(--cds-font-size-h6: 0.75rem);
+var(--cds-font-size-h5: 0.875rem);
+var(--cds-font-size-h4: 1rem);
+var(--cds-font-size-h3: 1.125rem);
+var(--cds-font-size-h2: 1.5625rem);
+var(--cds-font-size-h1: 2rem);
+```
+
+**Line Height**
+
+```css
+var(--cds-font-line-height-headings: 2);
+var(--cds-font-line-height-body: 1.5);
+var(--cds-font-line-height-condensed: 1.25);
+```

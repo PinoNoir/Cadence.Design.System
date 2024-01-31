@@ -1,0 +1,34 @@
+{
+  "breakpoint": {
+    "xs": {
+      "value": "36em",
+      "category": "size",
+      "type": "breakpoint",
+      "comment": "~576px"
+    },
+    "sm": {
+      "value": "48em",
+      "category": "size",
+      "type": "breakpoint",
+      "comment": "~768px"
+    },
+    "md": {
+      "value": "62em",
+      "category": "size",
+      "type": "breakpoint",
+      "comment": "~992px"
+    },
+    "lg": {
+      "value": "75em",
+      "category": "size",
+      "type": "breakpoint",
+      "comment": "~1200px"
+    },
+    "xl": {
+      "value": "90em",
+      "category": "size",
+      "type": "breakpoint",
+      "comment": "~1440px"
+    }
+  }
+}

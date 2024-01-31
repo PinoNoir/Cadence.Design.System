@@ -1,0 +1,122 @@
+{
+  "border": {
+    "color": {
+      "default": {
+        "value": "{color.neutral.20.value}",
+        "category": "color"
+      },
+      "dark": {
+        "value": "{color.neutral.100.value}",
+        "category": "color"
+      },
+      "light": {
+        "value": "{color.neutral.30.value}",
+        "category": "color"
+      },
+      "primary": {
+        "value": "{color.primary.base.value}",
+        "category": "color"
+      },
+      "secondary": {
+        "value": "{color.secondary.base.value}",
+        "category": "color"
+      },
+      "tertiary": {
+        "value": "{color.tertiary.base.value}",
+        "category": "color"
+      },
+      "accent": {
+        "value": "{color.accent.value}",
+        "category": "color"
+      },
+      "help": {
+        "value": "{color.help.value}",
+        "category": "color"
+      },
+      "info": {
+        "value": "{color.info.value}",
+        "category": "color"
+      },
+      "success": {
+        "value": "{color.success.value}",
+        "category": "color"
+      },
+      "warning": {
+        "value": "{color.warning.value}",
+        "category": "color"
+      },
+      "error": {
+        "value": "{color.error.value}",
+        "category": "color"
+      },
+      "disabled": {
+        "value": "{color.disabled.value}",
+        "category": "color"
+      }
+    },
+    "radius": {
+      "0": {
+        "value": "0",
+        "category": "radii"
+      },
+      "1": {
+        "value": "1px",
+        "category": "radii"
+      },
+      "2": {
+        "value": "2px",
+        "category": "radii"
+      },
+      "3": {
+        "value": "3px",
+        "category": "radii"
+      },
+      "4": {
+        "value": "4px",
+        "category": "radii"
+      },
+      "5": {
+        "value": "5px",
+        "category": "radii"
+      },
+      "8": {
+        "value": "8px",
+        "category": "radii"
+      },
+      "round": {
+        "value": "1e5px",
+        "category": "radii"
+      },
+      "responsive": {
+        "value": "clamp(0px, calc(100vw - 100%) * var(--cds-radius-round), var(--cds-radius-8))",
+        "category": "radii"
+      }
+    },
+    "width": {
+      "1": {
+        "value": "1px",
+        "category": "size"
+      },
+      "2": {
+        "value": "2px",
+        "category": "size"
+      },
+      "3": {
+        "value": "3px",
+        "category": "size"
+      },
+      "4": {
+        "value": "4px",
+        "category": "size"
+      },
+      "5": {
+        "value": "5px",
+        "category": "size"
+      },
+      "responsive": {
+        "value": "clamp(0px, calc(100vw - 100%) * var(--cds-border-width-5), var(--cds-border-width-1))",
+        "category": "size"
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+@use '../foundations' as *;
+
+//  Flex-group utility class for button groups and content that need to wrap and have spacing
+
+.flex-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--flex-gap, $flex-group-gap);
+}
+
+//  Flex-grow utility class for buttons and content that fill the entire parent container
+
+.flex-grow {
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+}

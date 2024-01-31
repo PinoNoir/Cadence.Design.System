@@ -1,0 +1,179 @@
+import { Canvas, Meta, Story, Markdown } from '@storybook/addon-docs';
+import { Box } from '../../components/box';
+import { Icon } from '@iconify/react';
+
+<Meta title="Foundations/Spacing" name="Spacing" />
+
+# CDS Spacing
+
+> All spacing values use `rem` units (root em).
+
+> `rem` unit is only relative to the HTML document's root element.
+
+> `em` unit is only relative to the immediate parent of the targeted element.
+
+## Spacing Tokens
+
+Read more about using CSS custom properties [here <Icon icon="mdi:open-in-new"/>](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties" 'title').
+
+```css
+--cds-space-48: 2.75rem /* 48px */ --cds-space-40: 2.5rem /* 40px */ --cds-space-32: 2rem /* 32px */ --cds-space-24:
+  1.5rem /* 24px */ --cds-space-16: 1rem /* 16px - Base size */ --cds-space-12: 0.75rem /* 12px */ --cds-space-8: 0.5rem
+  /* 8px */ --cds-space-4: 0.25rem /* 4px */ --cds-space-2: 0.125rem /* 2px */ --cds-space-none: 0
+  /* 0px - Can be used as a reset */;
+```
+
+## Using CSS Utility Classes
+
+If using the `@stretto/cds-scss` package, you can use the following utility classes in your markup (similar to Bootstrap utilities):
+
+<Markdown>
+  {`
+| Utility Class | CSS Property    | Value  |
+|---------------|-----------------|--------|
+| mt-[n]        | margin-top:     | [n]rem |
+| mb-[n]        | margin-bottom:  | [n]rem |
+| mx-[n]        | margin-block:   | [n]rem |
+| my-[n]        | margin-inline:  | [n]rem |
+| pt-[n]        | padding-top:    | [n]rem |
+| pb-[n]        | padding-bottom: | [n]rem |
+| px-[n]        | padding-block:  | [n]rem |
+| py-[n]        | padding-inline: | [n]rem |
+`}
+</Markdown>
+`n = none, 2, 4, 8, 12, 16, 24, 32, 40, 48`
+
+`x = horizontal spacing (left and right)`
+
+`y = vertical spacing (top and bottom)`
+
+<table>
+  <thead>
+    <tr>
+      <th>n</th>
+      <th>Value</th>
+      <th>Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>4</td>
+      <td align="center">4px</td>
+      <td align="center">
+        <Box padding="4px" width="128px" bg="teal50"></Box>
+      </td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td align="center">8px</td>
+      <td align="center">
+        <Box padding="8px" width="128px" bg="teal50"></Box>
+      </td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td align="center">12px</td>
+      <td align="center">
+        <Box padding="12px" width="128px" bg="teal50"></Box>
+      </td>
+    </tr>
+    <tr>
+      <td>16</td>
+      <td align="center">16px</td>
+      <td align="center">
+        <Box padding="16px" width="128px" bg="teal50"></Box>
+      </td>
+    </tr>
+    <tr>
+      <td>24</td>
+      <td align="center">24px</td>
+      <td align="center">
+        <Box padding="24px" width="128px" bg="teal50"></Box>
+      </td>
+    </tr>
+    <tr>
+      <td>32</td>
+      <td align="center">32px</td>
+      <td align="center">
+        <Box padding="32px" width="128px" bg="teal50"></Box>
+      </td>
+    </tr>
+    <tr>
+      <td>40</td>
+      <td align="center">40px</td>
+      <td align="center">
+        <Box padding="40px" width="128px" bg="teal50"></Box>
+      </td>
+    </tr>
+    <tr>
+      <td>48</td>
+      <td align="center">48px</td>
+      <td align="center">
+        <Box padding="48px" width="128px" bg="teal50"></Box>
+      </td>
+    </tr>
+    <tr>
+      <td>56</td>
+      <td align="center">56px</td>
+      <td align="center">
+        <Box padding="56px" width="128px" bg="teal50"></Box>
+      </td>
+    </tr>
+    <tr>
+      <td>64</td>
+      <td align="center">64px</td>
+      <td align="center">
+        <Box padding="64px" width="128px" bg="teal50"></Box>
+      </td>
+    </tr>
+    <tr>
+      <td>72</td>
+      <td align="center">72px</td>
+      <td align="center">
+        <Box padding="72px" width="128px" bg="teal50"></Box>
+      </td>
+    </tr>
+    <tr>
+      <td>80</td>
+      <td align="center">80px</td>
+      <td align="center">
+        <Box padding="80px" width="128px" bg="teal50"></Box>
+      </td>
+    </tr>
+    <tr>
+      <td>88</td>
+      <td align="center">88px</td>
+      <td align="center">
+        <Box padding="88px" width="128px" bg="teal50"></Box>
+      </td>
+    </tr>
+    <tr>
+      <td>96</td>
+      <td align="center">96px</td>
+      <td align="center">
+        <Box padding="96px" width="128px" bg="teal50"></Box>
+      </td>
+    </tr>
+    <tr>
+      <td>128</td>
+      <td align="center">128px</td>
+      <td align="center">
+        <Box padding="128px" width="128px" bg="teal50"></Box>
+      </td>
+    </tr>
+    <tr>
+      <td>144</td>
+      <td align="center">144px</td>
+      <td align="center">
+        <Box padding="144px" width="128px" bg="teal50"></Box>
+      </td>
+    </tr>
+    <tr>
+      <td>160</td>
+      <td align="center">160px</td>
+      <td align="center">
+        <Box padding="160px" width="128px" bg="teal50"></Box>
+      </td>
+    </tr>
+  </tbody>
+</table>

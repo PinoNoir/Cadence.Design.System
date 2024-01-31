@@ -1,0 +1,39 @@
+{
+  "name": "@stretto/cds-foundations",
+  "description": "Official Cadence Design System tokens using Style Dictionary",
+  "version": "1.4.4",
+  "packageManager": "pnpm@8.6.0",
+  "publishConfig": {
+    "registry": "https://nexus.stretto.com/repository/npm-releases/"
+  },
+  "author": {
+    "name": "Nicholas Pino",
+    "email": "nicholas.pino@stretto.com"
+  },
+  "license": "MIT",
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "files": [
+    "lib",
+    "properties"
+  ],
+  "scripts": {
+    "build-tokens": "rimraf ./lib && style-dictionary build --config ./sd.config.js && tsc",
+    "build-tokens-tsc": "tsc --skipLibCheck",
+    "watch": "pnpm build-tokens && chokidar  \"src/tokens/**/*.json\" -c \"pnpm run build-tokens\""
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^6.10.0",
+    "@typescript-eslint/parser": "^6.10.0",
+    "chokidar": "^3.5.3",
+    "chokidar-cli": "^3.0.0",
+    "eslint": "^8.53.0",
+    "eslint-config-prettier": "^9.0.0",
+    "handlebars": "^4.7.8",
+    "lodash": "^4.17.21",
+    "prettier": "^3.0.3",
+    "rimraf": "^5.0.5",
+    "style-dictionary": "^3.9.0",
+    "typescript": "^5.0.2"
+  }
+}

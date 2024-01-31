@@ -1,0 +1,12 @@
+@use '../foundations' as *;
+
+// Font size classes based on the Typography $font-sizes map
+
+@each $font-size, $value in $font-sizes {
+
+  .font-size {
+    &-#{$font-size} {
+      font-size: $value;
+    }
+  }
+}

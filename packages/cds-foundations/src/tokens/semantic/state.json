@@ -1,0 +1,50 @@
+{
+  "hover": {
+    "color": {
+      "help": {
+        "value": "{color.magenta.70.value}",
+        "category": "color"
+      },
+      "info": {
+        "value": "{color.blue.70.value}",
+        "category": "color"
+      },
+      "success": {
+        "value": "{color.green.70.value}",
+        "category": "color"
+      },
+      "warning": {
+        "value": "{color.yellow.70.value}",
+        "category": "color"
+      },
+      "error": {
+        "value": "{color.red.70.value}",
+        "category": "color"
+      }
+    }
+  },
+  "focus": {
+    "color": {
+      "help": {
+        "value": "{color.magenta.20.value}",
+        "category": "color"
+      },
+      "info": {
+        "value": "{color.blue.20.value}",
+        "category": "color"
+      },
+      "success": {
+        "value": "{color.green.20.value}",
+        "category": "color"
+      },
+      "warning": {
+        "value": "{color.yellow.20.value}",
+        "category": "color"
+      },
+      "error": {
+        "value": "{color.red.20.value}",
+        "category": "color"
+      }
+    }
+  }
+}

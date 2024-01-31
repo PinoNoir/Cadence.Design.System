@@ -1,0 +1,78 @@
+{
+  "name": "@stretto/cadence-design-system",
+  "version": "1.0.0",
+  "private": true,
+  "packageManager": "pnpm@8.6.0",
+  "workspaces": [
+    "apps/**",
+    "packages/**"
+  ],
+  "author": {
+    "name": "Nicholas Pino",
+    "email": "nicholas.pino@stretto.com"
+  },
+  "license": "MIT",
+  "scripts": {
+    "build": "pnpm --recursive run build",
+    "test": "pnpm --recursive run test",
+    "changeset": "changeset",
+    "version-packages": "changeset version",
+    "commit": "git add . && cz",
+    "release": "changeset publish",
+    "format": "syncpack format -s -c ./.syncpackrc",
+    "install-deps": "pnpm install --recursive",
+    "lint": "prettier --ignore-path .eslintignore --check \"**/*.{js,jsx,ts,tsx,json,css,html,md,mdx}\" && eslint \"packages/**/*.{js,jsx,ts,tsx}\"",
+    "lint:fix": "prettier --ignore-path .eslintignore --write \"**/*.{js,jsx,ts,tsx,json,css,html,md,mdx}\"",
+    "preinstall": "only-allow pnpm",
+    "update-deps": "pnpm update -i --recursive --latest",
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.23.3",
+    "@babel/preset-react": "^7.23.3",
+    "@babel/preset-typescript": "^7.23.3",
+    "@changesets/changelog-git": "^0.1.14",
+    "@changesets/changelog-github": "^0.4.8",
+    "@changesets/cli": "^2.26.2",
+    "@changesets/get-release-plan": "^3.0.17",
+    "@changesets/types": "^5.2.1",
+    "@commitlint/cli": "^18.2.0",
+    "@commitlint/config-conventional": "^18.1.0",
+    "@types/react": "^18.2.37",
+    "@types/react-dom": "^18.2.15",
+    "@typescript-eslint/eslint-plugin": "^6.10.0",
+    "@typescript-eslint/parser": "^6.10.0",
+    "commitizen": "^4.3.0",
+    "concurrently": "^8.2.2",
+    "cz-conventional-changelog": "^3.3.0",
+    "dotenv": "^16.3.1",
+    "eslint": "^8.49.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-jest": "^27.6.0",
+    "eslint-plugin-jsx-a11y": "^6.8.0",
+    "eslint-plugin-mdx": "^2.2.0",
+    "eslint-plugin-prettier": "^5.0.1",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "find-packages": "^10.0.4",
+    "husky": "^8.0.0",
+    "lint-staged": "^14.0.1",
+    "only-allow": "^1.2.1",
+    "prettier": "^3.0.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "rimraf": "^5.0.5",
+    "syncpack": "^11.2.1",
+    "tsup": "^7.2.0",
+    "typescript": "^5.0.2"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "node": true
+  },
+  "extends": [
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:storybook/recommended",
+    "plugin:react/recommended",
+    "plugin:jsx-a11y/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "overrides": [
+    {
+      "files": ["lib/*.ts", "*.mdx"],
+      "extends": "plugin:mdx/recommended",
+      "rules": {
+        "no-undef": "off"
+      }
+    }
+  ],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "plugins": ["react", "react-refresh", "jsx-a11y", "@typescript-eslint"],
+  "rules": {
+    "react-refresh/only-export-components": 0,
+    "react/prop-types": 0,
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-uses-react": "off",
+    "no-unused-vars": "off",
+    "react/no-unknown-property": [
+      "error",
+      {
+        "ignore": ["automation-id"]
+      }
+    ],
+    "@typescript-eslint/no-unused-vars": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "react/jsx-pascal-case": [
+      2,
+      {
+        "allowNamespace": true
+      }
+    ],
+    "prefer-const": [
+      1,
+      {
+        "destructuring": "all"
+      }
+    ]
+  },
+  "ignorePatterns": ["src/**/*.stories.tsx", "src/**/*.test.tsx"],
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  }
+}

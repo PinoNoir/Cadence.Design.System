@@ -1,0 +1,27 @@
+{
+  "extends": "../../tsconfig",
+  "compilerOptions": {
+    "rootDir": "src",
+    "outDir": "lib",
+    "jsx": "react-jsx",
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "allowJs": true,
+    "checkJs": true,
+    "moduleDetection": "force",
+    "moduleResolution": "Node",
+    // TODO: Turn back on once stricter typings for internal utitlies are complete
+    "noImplicitAny": false,
+    "skipLibCheck": true,
+    "declaration": true,
+    "declarationMap": true,
+    "declarationDir": "lib",
+    "sourceMap": true
+  },
+  "mdx": {
+    "plugins": [["remark-frontmatter", ["toml", "yaml"]], "remark-gfm"]
+  },
+  "include": ["src/**/*", "src/vite-env-override.d.ts", "src/vite-env.d.ts"],
+  "exclude": ["lib", "node_modules"]
+}

@@ -1,0 +1,35 @@
+@use '../../foundations' as *;
+
+// Base styling for BCC Footer
+
+.bcc-footer-primary {
+  display: flex;
+  flex-direction: column;
+  margin-block: $cds-space-32;
+  text-align: center;
+
+  ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin: $cds-space-12;
+  }
+  a {
+    color: $cds-text-color-info;
+    font-size: $font-size-small;
+    margin-inline: $cds-space-8;
+    pointer-events: all;
+    text-decoration: none;
+    transition: color 300ms ease-out;
+
+    &:hover {
+      color: $cds-text-interactive;
+      text-decoration: underline;
+    }
+  }
+  .copyright {
+    color: $cds-text-secondary;
+    font-size: $font-size-small;
+    margin-bottom: $cds-space-12;
+  }
+}

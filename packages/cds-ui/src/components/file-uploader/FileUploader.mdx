@@ -1,0 +1,67 @@
+import { Canvas, Controls, Meta } from '@storybook/blocks';
+import * as FileUploaderStories from './FileUploader.stories';
+
+<Meta of={FileUploaderStories} />
+
+# File Uploader
+
+The `FileUploader` component allows users to upload files to the system from their local device.
+
+<br />
+
+## Features
+
+- Drag and Drop: Users can drag files directly into the component area or use a traditional file selection dialog.
+- Multiple File Support: Allows uploading multiple files simultaneously.
+- File Type Validation: Ensures only specified file types are uploaded.
+- Upload Progress Indicator: Displays real-time progress for individual file uploads.
+
+### Component API
+
+<Controls />
+
+### Usage
+
+```jsx
+<FileUploader
+  buttonLabel="Select Files"
+  labelDescription="or drag files here."
+  accept={['application/pdf', '.pdf', '.docx', '.doc']}
+  helperText="50 files max per upload, each file size cannot exceed 25MB, total upload size cannot exceed 95MB."
+  handleFileAdd={handleUpload}
+  onUpload={handleProgress}
+  onUploadProgress={handleSuccess}
+  onUploadSuccess={handleFailure}
+  onFileValidationFailure={handleValidationFailure}
+/>
+```
+
+### File Upload Success
+
+<Canvas of={FileUploaderStories.Success} />
+
+### File Upload Failed
+
+<Canvas of={FileUploaderStories.Failed} />
+
+### File Upload Disabled
+
+<Canvas of={FileUploaderStories.Disabled} />
+
+# FileCard
+
+> FileCard displays individual file information including status, progress, and actions like edit, download, and delete.
+
+<Canvas of={FileUploaderStories.FileCardExamples} />
+
+### Component API
+
+> - `id?:` (string) Unique id for the file.
+> - `automation-id?:` (string) Automation id for testing purposes.
+> - `children?:` (ReactNode) Option to pass in children.
+> - `metaData?:` (string) File metadata.
+> - `fileWithStatus:` (object) Object containing file info and status.
+> - `onEdit?:` (function) Callback for editing file metadata.
+> - `onDelete?:` (function) Callback for deleting a file.
+> - `onDownload?:` (function) Callback for downloading a file.
+> - `onRetry?:` (function) Callback for retrying upload.

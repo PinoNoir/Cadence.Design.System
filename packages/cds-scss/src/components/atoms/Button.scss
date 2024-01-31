@@ -1,0 +1,138 @@
+@use '../../foundations/' as *;
+@use 'sass:map';
+
+// Map for button colors
+$button-color: (
+  'default': $cds-bg-color-dark,
+  'primary': $cds-bg-color-primary,
+  'secondary': $cds-bg-color-secondary,
+  'outline': $cds-color-transparent,
+  'tertiary': $cds-bg-color-tertiary,
+  'accent': $cds-bg-color-accent,
+  'error': $cds-bg-color-error,
+  'transparent': $cds-color-transparent,
+);
+
+$cds-button-height-large: $cds-space-40;
+$cds-button-height-medium: $cds-space-32;
+$cds-button-height-small: $cds-space-24;
+
+// Mixin for padding and height
+@mixin get-size($button-height) {
+  height: $button-height;
+}
+
+// Use the sass:color shade function for hover states
+@function shade($color, $percentage) {
+  @return mix(#173237, $color, $percentage);
+}
+
+%btn-base {
+  background-color: $cds-bg-color-dark;
+  border: 1px solid $cds-border-width-1;
+  padding-block: $cds-space-12;
+  padding-inline: $cds-space-16;
+  color: $cds-text-color-light;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  white-space: nowrap;
+  cursor: pointer;
+  line-height: normal;
+  border-radius: $cds-border-radius-4;
+  font-family: $cds-font-family-base;
+  font-size: $cds-font-size-body;
+  transition: all 300ms ease-in-out;
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+}
+
+@mixin btn-lg {
+  @include get-size($cds-button-height-large);
+}
+
+@mixin btn-md {
+  @include get-size($cds-button-height-medium);
+}
+
+@mixin btn-sm {
+  @include get-size($cds-button-height-small);
+}
+
+.btn-lg {
+  @extend %btn-base;
+  @include btn-lg;
+}
+
+.btn-md {
+  @extend %btn-base;
+  @include btn-md;
+}
+
+.btn-sm {
+  @extend %btn-base;
+  @include btn-sm;
+}
+
+@mixin btn-standard($name, $color) {
+  .btn-#{$name} {
+    background-color: $color;
+    border: 1px solid $color;
+    color: $cds-text-color-light;
+
+    &:hover {
+      background-color: shade($color, 20%);
+      border-color: shade($color, 20%);
+      color: $cds-text-color-light;
+    }
+    &:focus {
+      box-shadow: 0 0 2px 2px hsla(0 0% 0% / 15%);
+    }
+    &:disabled {
+      border: 1px solid $color;
+      color: $cds-text-color-light;
+      opacity: 0.4;
+
+      &:hover {
+        background-color: $color;
+        border-color: $color;
+        color: $cds-text-color-light;
+      }
+      &:is(.btn-secondary, .btn-secondary-outline) {
+        color: $cds-text-color-dark;
+      }
+      &:is(.btn-error) {
+        background-color: $cds-color-transparent;
+        color: $cds-text-color-error;
+      }
+    }
+
+    @if #{$name} == 'secondary' {
+      color: map.get($button-color, 'default');
+      border: 1px solid $cds-border-color-secondary;
+
+      &:hover {
+        color: map.get($button-color, 'default');
+        border: 1px solid $cds-border-color-secondary;
+      }
+    } @else if #{$name} == 'error' {
+      background-color: map.get($button-color, 'transparent');
+      color: map.get($button-color, 'error');
+    } @else if #{$name} == 'secondary-outline' {
+      background-color: map.get($button-color, 'secondary-outline');
+      color: map.get($button-color, 'default');
+      border: 1px solid $cds-border-color-secondary;
+
+      &:hover {
+        color: map.get($button-color, 'default');
+      }
+    }
+  }
+}
+
+@each $name, $color in $button-color {
+  @include btn-standard($name, map.get($button-color, $name));
+}

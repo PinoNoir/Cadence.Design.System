@@ -1,0 +1,97 @@
+@use '../../foundations' as *;
+@use '../../layout/' as *;
+
+.toast-container {
+  display: grid;
+  gap: 1rem;
+  justify-items: end;
+  position: fixed;
+  right: 1rem;
+  top: 5rem;
+}
+
+.toast {
+  animation: slideIn 5000ms cubic-bezier(0.785, 0.135, 0.15, 0.86) forwards;
+  background-color: $cds-color-white;
+  border: 1px solid $cds-color-neutral-20;
+  border-radius: $cds-border-radius-4;
+  box-shadow:
+    0 3px 4px rgb(93 113 116 / 25%),
+    0 1px 4px rgb(93 113 116 / 25%);
+  display: flex;
+  flex-direction: column;
+  max-width: 20rem;
+}
+
+// Animations to fade and slide the toast in and out of the viewport
+@keyframes slide-in {
+
+  0%,
+  100% {
+    opacity: 0;
+    transform: translateX(120%);
+  }
+  10%,
+  90% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
+@mixin toast-header($bg) {
+  background-color: $bg;
+  border-bottom: 1px solid $cds-color-neutral-20;
+  display: flex;
+  justify-content: space-between;
+  padding: $cds-space-12;
+}
+
+.toast-header-title {
+  align-items: center;
+  display: inline-flex;
+  font-size: $font-size-h4;
+}
+
+.toast-header-icon {
+  align-items: center;
+  display: inline-flex;
+}
+
+.toast-header-close-btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  &:focus {
+    box-shadow: none;
+  }
+}
+
+.toast-body {
+  color: $cds-text-dark;
+  font-size: $font-size-small;
+  line-height: $cds-font-line-height-base;
+  margin-block: $cds-space-12;
+  padding-block: $cds-space-8;
+  padding-inline: $cds-space-12;
+
+  &-link {
+    display: block;
+    font-size: $font-size-small;
+    margin-top: $cds-space-12;
+  }
+}
+
+// Additional classes to include different header styles for toast types (info, success, error)
+
+.info {
+  @include toast-header($bg: $cds-color-info-base);
+}
+
+.success {
+  @include toast-header($bg: $cds-color-success-base);
+}
+
+.error {
+  @include toast-header($bg: $cds-color-error-base);
+}

@@ -1,0 +1,33 @@
+@use '../../foundations' as *;
+
+.iconify {
+  vertical-align: middle;
+  display: inline-flex;
+  font-size: $cds-font-size-h3;
+  margin-inline: $cds-space-4;
+}
+
+.icon-size-tooltip {
+  height: $size-20;
+  width: $size-20;
+}
+
+// Custom classes applied to the <use> svg element for hover states
+
+use[href*='#mdi-twitter'] {
+  color: $cds-icon-color-dark;
+  transition: 300ms ease-out;
+}
+
+use[href*='#mdi-twitter']:hover {
+  color: $cds-icon-color-info;
+}
+
+use[href*='#mdi-linkedin'] {
+  color: $cds-icon-color-dark;
+  transition: 300ms ease-out;
+}
+
+use[href*='#mdi-linkedin']:hover {
+  color: $cds-icon-color-info;
+}

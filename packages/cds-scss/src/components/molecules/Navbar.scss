@@ -1,0 +1,52 @@
+@use '../../foundations' as *;
+
+// Default Header & Navbar
+
+header {
+  background-color: $cds-color-white;
+  border-bottom: 1px solid $cds-color-neutral-30;
+  margin: 0 auto;
+}
+
+nav {
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+.global-navbar {
+  align-items: center;
+  display: flex;
+  height: 70px;
+}
+
+.logo {
+  margin-inline: $cds-space-24;
+  padding: 0;
+}
+
+.nav-links {
+  display: flex;
+  flex: 1 1 0;
+  flex-wrap: wrap;
+  height: 100%;
+}
+
+.nav-links li {
+  list-style-type: none;
+
+  a {
+    align-items: center;
+    border-bottom: 4px solid transparent;
+    color: $cds-text-color-dark;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    padding-inline: $cds-space-16;
+    text-decoration: none;
+    transition: border-bottom 300ms ease-out;
+
+    &:hover {
+      border-bottom: 4px solid $cds-color-neutral-100;
+    }
+  }
+}

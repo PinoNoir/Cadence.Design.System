@@ -1,0 +1,41 @@
+@use '../foundations' as *;
+
+// Helper classes for main BCC Color System
+
+.icon-color-primary {
+  color: var(--cds-icon-color-primary);
+}
+
+.icon-color-light {
+  color: var(--cds-icon-color-light);
+}
+
+.icon-color-default {
+  color: var(--cds-icon-color-default);
+}
+
+// Helper classes for System Feedback
+
+.icon-color-accent {
+  color: var(--cds-icon-color-accent);
+}
+
+.icon-color-help {
+  color: var(--cds-icon-color-help);
+}
+
+.icon-color-info {
+  color: var(--cds-icon-color-info);
+}
+
+.icon-color-success {
+  color: var(--cds-icon-color-success);
+}
+
+.icon-color-warning {
+  color: var(--cds-icon-color-warning);
+}
+
+.icon-color-error {
+  color: var(--cds-icon-color-error);
+}

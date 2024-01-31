@@ -1,0 +1,24 @@
+@use '../../foundations' as *;
+
+.checkbox {
+  cursor: pointer;
+  display: inline-block;
+  min-height: $size-14;
+  min-width: $size-14;
+  position: static;
+  vertical-align: middle;
+  margin-inline-end: $cds-space-8;
+}
+
+.label {
+  color: $cds-text-color-dark;
+  font-family: $cds-font-family-base;
+  font-size: $cds-font-size-body;
+  margin-block-end: $cds-space-none;
+  margin-inline-end: $cds-space-8;
+  vertical-align: middle;
+}
+
+input[type='checkbox']:disabled {
+  cursor: not-allowed;
+}

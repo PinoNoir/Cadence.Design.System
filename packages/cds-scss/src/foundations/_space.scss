@@ -1,0 +1,41 @@
+@use 'tokens' as *;
+
+// Sass Map for utility classes
+$space: (
+  '0': 0,
+  // ~0px Can be used as a reset
+  '2': 0.125rem,
+  // ~2px
+  '4': 0.25rem,
+  // ~4px
+  '8': 0.5rem,
+  // ~8px
+  '12': 0.75rem,
+  // ~12px
+  '16': 1rem,
+  // ~16px
+  '24': 1.5rem,
+  // ~24px
+  '32': 2rem,
+  // ~32px
+  '40': 2.5rem,
+  // ~40px
+  '48': 2.75rem,
+  // ~48px
+);
+
+// For use in the code base
+$cds-space-0: var(--cds-space-0);
+$cds-space-2: var(--cds-space-2);
+$cds-space-4: var(--cds-space-4);
+$cds-space-8: var(--cds-space-8);
+$cds-space-12: var(--cds-space-12);
+$cds-space-16: var(--cds-space-16);
+$cds-space-24: var(--cds-space-24);
+$cds-space-32: var(--cds-space-32);
+$cds-space-40: var(--cds-space-40);
+$cds-space-48: var(--cds-space-48);
+
+// Default spacing values for the gap CSS property for grid and flexbox
+$grid-gap: $cds-space-24;
+$flex-group-gap: $cds-space-16;

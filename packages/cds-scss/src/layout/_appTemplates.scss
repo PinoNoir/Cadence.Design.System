@@ -1,0 +1,27 @@
+@use '../abstracts' as *;
+@use '../foundations' as *;
+
+// BCC App Template Layouts
+
+.app-template-1 {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 2fr 1fr;
+  margin-block: $cds-space-40;
+}
+
+.main-content {
+  display: grid;
+  height: 100%;
+}
+
+@include mq(md) {
+
+  .app-template-1 {
+    display: grid;
+    grid-template-areas:
+      'main-content'
+      'right-sidebar-content';
+    grid-template-columns: 1fr;
+  }
+}

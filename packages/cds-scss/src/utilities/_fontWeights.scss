@@ -1,0 +1,19 @@
+@use '../foundations' as *;
+
+// Utility classes for font weights
+
+.fw-light {
+  font-weight: $cds-font-weight-light;
+}
+
+.fw-regular {
+  font-weight: $cds-font-weight-regular;
+}
+
+.fw-medium {
+  font-weight: $cds-font-weight-medium;
+}
+
+.fw-bold {
+  font-weight: $cds-font-weight-bold;
+}

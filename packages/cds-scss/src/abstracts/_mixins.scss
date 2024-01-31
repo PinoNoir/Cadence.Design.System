@@ -1,0 +1,90 @@
+@use 'sass:meta';
+@use 'sass:math';
+@use 'sass:map';
+@use 'breakpoints' as *;
+
+// Custom mixins for the breakpoints map
+
+@mixin mq($size) {
+  @if map.has-key($breakpoints, $size) {
+    $breakpoint: map.get($breakpoints, $size);
+
+    @media screen and (max-width: $breakpoint) {
+      @content;
+    }
+  } @else if meta.type-of($size) == number {
+    @if math.is-unitless($size) {
+      @error 'when using a number with @mq() make sure to include a unit';
+    } @else {
+      @media screen and (max-width: $size) {
+        @content;
+      }
+    }
+  } @else {
+    @error 'the keyword #{$size} is not in the $breakpoints map';
+  }
+}
+
+// // define HSL color variable
+// @mixin define-color-hsl($color, $hue, $saturation, $lightness) {
+//   #{$color}: unquote("hsl(#{$hue}, #{$saturation}, #{$lightness})");
+//   #{$color}-h: #{$hue};
+//   #{$color}-s: #{$saturation};
+//   #{$color}-l: #{$lightness};
+// }
+
+// // return color with different opacity value
+// @function alpha($color, $opacity) {
+//   $color: str-replace($color, "var(");
+//   $color: str-replace($color, ")");
+//   $color-h: var(#{$color + "-h"});
+//   $color-s: var(#{$color + "-s"});
+//   $color-l: var(#{$color + "-l"});
+//   @return hsla($color-h, $color-s, $color-l, $opacity);
+// }
+
+// // return color with different lightness value
+// @function lightness($color, $lightnessMultiplier) {
+//   $color: str-replace($color, "var(");
+//   $color: str-replace($color, ")");
+//   $color-h: var(#{$color + "-h"});
+//   $color-s: var(#{$color + "-s"});
+//   $color-l: var(#{$color + "-l"});
+//   @return hsl($color-h, $color-s, calc(#{$color-l} * #{$lightnessMultiplier}));
+// }
+
+// // modify color HSLA values
+// @function adjustHSLA(
+//   $color,
+//   $hue-multiplier: 1,
+//   $saturation-multiplier: 1,
+//   $lightness-multiplier: 1,
+//   $opacity: 1
+// ) {
+//   $color: str-replace($color, "var(");
+//   $color: str-replace($color, ")");
+//   $color-h: var(#{$color + "-h"});
+//   $color-s: var(#{$color + "-s"});
+//   $color-l: var(#{$color + "-l"});
+//   @return hsla(
+//     calc(#{$color-h} * #{$hue-multiplier}),
+//     calc(#{$color-s} * #{$saturation-multiplier}),
+//     calc(#{$color-l} * #{$lightness-multiplier}),
+//     $opacity
+//   );
+// }
+
+// // replace substring with another string
+// // credits: https://css-tricks.com/snippets/sass/str-replace-function/
+// @function str-replace($string, $search, $replace: "") {
+//   $index: str-index($string, $search);
+//   @if $index {
+//     @return str-slice($string, 1, $index - 1) + $replace +
+//       str-replace(
+//         str-slice($string, $index + str-length($search)),
+//         $search,
+//         $replace
+//       );
+//   }
+//   @return $string;
+// }

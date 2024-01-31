@@ -1,0 +1,22 @@
+@use '../abstracts/' as *;
+@use '../foundations' as *;
+
+// Custom container classes
+
+$container-inline-padding: $cds-space-16;
+$container-width: 80rem;
+$container-max-width: 100%;
+
+.container {
+  --padding: #{$container-inline-padding} * 2;
+  --max-width: #{$container-width};
+
+  margin-left: auto;
+  margin-right: auto;
+  width: min(100% - var(--padding, $container-inline-padding), var(--max-width, $container-width));
+}
+
+.container[data-type='full-width'] {
+  --padding: #{$cds-space-0};
+  --max-width: #{$container-max-width};
+}

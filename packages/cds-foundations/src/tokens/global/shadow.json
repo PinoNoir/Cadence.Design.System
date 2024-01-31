@@ -1,0 +1,24 @@
+{
+  "shadow": {
+    "1": {
+      "value": "0px 2px 5px 0px rgba(0, 0, 0, 0.2);",
+      "category": "shadows"
+    },
+    "2": {
+      "value": "0px 2px 12px 0px rgba(0, 0, 0, 0.2)",
+      "category": "shadows"
+    },
+    "3": {
+      "value": "0px 2px 15px 0px rgba(0, 0, 0, 0.2)",
+      "category": "shadows"
+    },
+    "4": {
+      "value": "0px 3px 20px 0px rgba(0, 0, 0, 0.2)",
+      "category": "shadows"
+    },
+    "5": {
+      "value": "0px 3px 25px 0px rgba(0, 0, 0, 0.2)",
+      "category": "shadows"
+    }
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "customTypes": [],
+  "dependencyTypes": [
+    "dev",
+    "local",
+    "overrides",
+    "peer",
+    "pnpmOverrides",
+    "prod",
+    "resolutions"
+  ],
+  "filter": ".",
+  "indent": "  ",
+  "semverGroups": [],
+  "semverRange": "",
+  "sortFirst": [
+    "name",
+    "description",
+    "version",
+    "private",
+    "packageManager",
+    "publishConfig",
+    "workspaces",
+    "author",
+    "license",
+    "keywords",
+    "main",
+    "module",
+    "types",
+    "files",
+    "scripts",
+    "devDependencies",
+    "dependencies",
+    "peerDependencies"
+  ],
+  "source": [
+    "apps/*/package.json",
+    "packages/*/package.json"
+  ],
+  "versionGroups": [
+    {
+      "dependencies": [
+        "typescript",
+        "react",
+        "react-dom"
+      ],
+      "packages": [
+        "@stretto/apps/react-sandbox",
+        "@stretto/cds-ui"
+      ]
+    }
+  ]
+}

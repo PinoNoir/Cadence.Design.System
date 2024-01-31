@@ -1,0 +1,51 @@
+import { Canvas, Meta } from '@storybook/blocks';
+import { Icon } from '@iconify/react';
+import * as BoxStories from './Box.stories';
+
+<Meta of={BoxStories} />
+
+# Box
+
+> CDS provides a `@dessert-box/react` polymorphic component. [Learn more. <Icon icon="mdi:open-in-new"/>](https://github.com/TheMightyPenguin/dessert-box/blob/main/README.md#box" 'title')
+
+> Note: Use the Box component as a tool for quick prototyping. If a recurring pattern is present in your application, use CSS class or create a new component. This will improve maintainability in the long run.
+
+<Canvas of={BoxStories.Default} />
+
+## Usage
+
+- The Box component is great for prototyping and laying out content.
+
+- By default, the box is rendered as a `div` element.
+
+- Use the `as` prop to designate any valid html element you want to render in the DOM.
+
+- Use the built-in CSS Prop system provided by Vanilla-Extract package to style the Box component.
+
+### Basic Inline CSS Styling
+
+```jsx
+<Box
+  as="header"
+  style={{
+    display: 'flex',
+    padding: '24px',
+    width: '250px',
+    borderRadius: '4px',
+    justifyContent: 'center',
+    alignItems: 'center',
+    color: 'neutral100',
+    backgroundColor: 'neutral20',
+  }}
+>
+  <p>This is some centered content in the Box component.</p>
+</Box>
+```
+
+### CSS Prop System
+
+```jsx
+<Box as="footer" marginTop="24px">
+  <p>This is some centered content in the Box component.</p>
+</Box>
+```

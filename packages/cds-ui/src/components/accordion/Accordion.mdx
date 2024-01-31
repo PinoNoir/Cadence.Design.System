@@ -1,0 +1,102 @@
+import { Controls, Description, Meta, Story, Title } from '@storybook/blocks';
+import * as AccordionStories from './Accordion.stories';
+
+<Meta of={AccordionStories} />
+
+<Title />
+
+<Description />
+
+### Component API
+
+<Controls />
+
+### Usage
+
+The `Accordion` component accepts an array of `AccordionItem` objects as its `items` prop. Each `AccordionItem` object has the following properties:
+
+> - `id` - The unique id of the `AccordionItem`.
+> - `title` - The title of the `AccordionItem`.
+> - `description` - The description of the `AccordionItem`.
+> - `link` - An optional link to be displayed in the `AccordionItem`.
+> - `children` - The content of the `AccordionItem`.
+> - `contextMenu` - An optional context menu to be displayed in the `AccordionItem`.
+> - `open` - A boolean value indicating whether the `AccordionItem` is open or closed.
+> - `disabled` - A boolean value indicating whether the `AccordionItem` is disabled.
+
+```jsx
+const createContextMenu = () => {
+  return (
+    <ContextMenu>
+      <ContextMenuItem>Item 1</ContextMenuItem>
+      <ContextMenuItem>Item 2</ContextMenuItem>
+      <ContextMenuItem>Item 3</ContextMenuItem>
+    </ContextMenu>
+  );
+};
+
+<Accordion>
+  <AccordionItem
+    id="accordion-item-1"
+    open={false}
+    title="Section 1"
+    description="This is the description of section 1."
+    link={<Link href="#">Optional Link</Link>}
+    contextMenu={createContextMenu()}
+  >
+    <p>Accordion Content 1</p>
+  </AccordionItem>
+  <AccordionItem
+    id="accordion-item-2"
+    open={false}
+    title="Section 2"
+    description="This is the description of section 1."
+    link={<Link href="#">Optional Link</Link>}
+    contextMenu={createContextMenu()}
+  >
+    <p>Accordion Content 2</p>
+  </AccordionItem>
+
+```
+
+### Light Accordion (Default)
+
+> By default the accordion is rendered with a light color scheme.
+
+```jsx
+<Accordion colorMode="light">
+  <AccordionItem
+    id="accordion-item-1"
+    open={false}
+    title="Section 1"
+    description="This is the description of section 1."
+    link={<Link href="#">Optional Link</Link>}
+    contextMenu={createContextMenu()}
+  >
+    <p>Accordion Content 1</p>
+  </AccordionItem>
+  <AccordionItem
+    id="accordion-item-2"
+    open={false}
+    title="Section 2"
+    description="This is the description of section 1."
+    link={<Link href="#">Optional Link</Link>}
+    contextMenu={createContextMenu()}
+  >
+    <p>Accordion Content 2</p>
+  </AccordionItem>
+</Accordion>
+```
+
+<Story of={AccordionStories.LightAccordion} />
+
+### Dark Accordion
+
+> Use the `colorMode="dark"` prop to change the color scheme of the `Accordion`.
+> The `disabled` prop can be used to disable all of the `AccordionItem`s in the `Accordion`.
+
+```jsx
+<Accordion disabled={true} colorMode="dark" />
+```
+
+<Story of={AccordionStories.DarkAccordion} />

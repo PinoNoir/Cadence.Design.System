@@ -1,0 +1,22 @@
+// BKO Dashboard General Styling
+@use '../../foundations' as *;
+@use '../../layout/' as *;
+
+// .show-hero-image {
+//   background-image: url("/src/assets/Evening02.jpg");
+//   background-position: center top;
+//   background-repeat: no-repeat;
+//   background-size: cover;
+// }
+
+.greeting-container {
+  color: var(--cds-color-text-light);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 300px;
+}
+
+.greeting-subhead {
+  max-width: calc(12rem + 20vw);
+}

@@ -1,0 +1,279 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Foundations/Design Tokens" name="Design Tokens" />
+
+# CDS Design Tokens
+
+> Applications using Cadence Design System can use a set of pre-defined design tokens or CSS variables.
+
+> Note: CDS design tokens will be updated with new tokens in every release of the `@stretto/cds-scss` package.
+
+```css
+/**
+ * CDS Design Tokens Generated on Tue, 09 Jan 2024 16:37:30 GMT
+ */
+
+:root {
+  --cds-icon-size-xl: 64px;
+  --cds-icon-size-lg: 32px;
+  --cds-icon-size-default: 20px;
+  --cds-icon-size-sm: 16px;
+  --cds-icon-size-xs: 12px;
+  --cds-z-index-content: 0;
+  --cds-z-index-data-grid: 999;
+  --cds-z-index-header: 1000;
+  --cds-z-index-menu: 2000;
+  --cds-z-index-navigation: 6000;
+  --cds-z-index-mask: 6000;
+  --cds-z-index-modal: 8000;
+  --cds-z-index-toast: 9000;
+  --cds-font-line-height-headings: 2;
+  --cds-font-line-height-body: 1.5;
+  --cds-font-line-height-condensed: 1.25;
+  --cds-font-weight-bold: 700;
+  --cds-font-weight-medium: 500;
+  --cds-font-weight-regular: 400;
+  --cds-font-weight-light: 300;
+  --cds-font-size-xs: 0.625rem;
+  --cds-font-size-sm: 0.74996rem;
+  --cds-font-size-label: 0.875rem;
+  --cds-font-size-body: 0.875rem;
+  --cds-font-size-h6: 0.74996rem;
+  --cds-font-size-h5: 0.875rem;
+  --cds-font-size-h4: 0.99995rem;
+  --cds-font-size-h3: 1.12499rem;
+  --cds-font-size-h2: 1.56249rem;
+  --cds-font-size-h1: 1.99999rem;
+  --cds-font-family-monospace: 'source-code-pro', 'Menlo', 'Monaco', 'Consolas', 'Courier New', monospace;
+  --cds-font-family-headings: 'Roboto', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+  --cds-font-family-body: 'Roboto', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+  --cds-font-family-base: 'Roboto', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+  --cds-transition-time-default: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+  --cds-space-48: 2.75rem; /* 48px */
+  --cds-space-40: 2.5rem; /* 40px */
+  --cds-space-32: 2rem; /* 32px */
+  --cds-space-24: 1.5rem; /* 24px */
+  --cds-space-16: 1rem; /* 16px - Base size */
+  --cds-space-12: 0.75rem; /* 12px */
+  --cds-space-8: 0.5rem; /* 8px */
+  --cds-space-4: 0.25rem; /* 4px */
+  --cds-space-2: 0.125rem; /* 2px */
+  --cds-space-0: 0; /* 0px - Can be used as a reset */
+  --cds-shadow-5: 0px 3px 25px 0px rgba(0, 0, 0, 0.2);
+  --cds-shadow-4: 0px 3px 20px 0px rgba(0, 0, 0, 0.2);
+  --cds-shadow-3: 0px 2px 15px 0px rgba(0, 0, 0, 0.2);
+  --cds-shadow-2: 0px 2px 12px 0px rgba(0, 0, 0, 0.2);
+  --cds-shadow-1: 0px 2px 5px 0px rgba(0, 0, 0, 0.2);
+  --cds-opacity-100: 1;
+  --cds-opacity-90: 0.9;
+  --cds-opacity-80: 0.8;
+  --cds-opacity-70: 0.7;
+  --cds-opacity-60: 0.6;
+  --cds-opacity-50: 0.5;
+  --cds-opacity-40: 0.4;
+  --cds-opacity-30: 0.3;
+  --cds-opacity-20: 0.2;
+  --cds-opacity-10: 0.1;
+  --cds-color-overlay-90: hsla(0, 0%, 0%, 0.9);
+  --cds-color-overlay-80: hsla(0, 0%, 0%, 0.8);
+  --cds-color-overlay-70: hsla(0, 0%, 0%, 0.7);
+  --cds-color-overlay-60: hsla(0, 0%, 0%, 0.6);
+  --cds-color-overlay-50: hsla(0, 0%, 0%, 0.5);
+  --cds-color-overlay-40: hsla(0, 0%, 0%, 0.4);
+  --cds-color-overlay-30: hsla(0, 0%, 0%, 0.3);
+  --cds-color-overlay-20: hsla(0, 0%, 0%, 0.2);
+  --cds-color-overlay-10: hsla(0, 0%, 0%, 0.1);
+  --cds-color-red-100: #71121d;
+  --cds-color-red-90: #871522;
+  --cds-color-red-80: #9e1928;
+  --cds-color-red-70: #b41c2e;
+  --cds-color-red-60: #cb2033;
+  --cds-color-red-50: #e12339; /* BCC Error - accent color used for error buttons and error messaging */
+  --cds-color-red-40: #ea6574;
+  --cds-color-red-30: #ed7b88;
+  --cds-color-red-20: #f6bdc4;
+  --cds-color-red-10: #fce9eb; /* Background color used for error alert components. */
+  --cds-color-yellow-100: #765510; /* BCC Warning - accent color used for warning message text */
+  --cds-color-yellow-90: #8d6613;
+  --cds-color-yellow-80: #a57716;
+  --cds-color-yellow-70: #bc881a;
+  --cds-color-yellow-60: #d4991d;
+  --cds-color-yellow-50: #ebaa20; /* BCC Notifications - accent color used for pill/badge notifications */
+  --cds-color-yellow-40: #f1c463;
+  --cds-color-yellow-30: #f3cc79;
+  --cds-color-yellow-20: #f9e6bc;
+  --cds-color-yellow-10: #fdf7e9; /* Background color used for warning alert components. */
+  --cds-color-green-100: #083a1c;
+  --cds-color-green-90: #0a4c25;
+  --cds-color-green-80: #0d5e2d;
+  --cds-color-green-70: #11793a;
+  --cds-color-green-60: #128741;
+  --cds-color-green-50: #16a550; /* BCC Success - accent color used for success states and messaging */
+  --cds-color-green-40: #45c97a;
+  --cds-color-green-30: #88ddaa;
+  --cds-color-green-20: #b0e8c6;
+  --cds-color-green-10: #d7f4e3; /* Background color used for success alert components. */
+  --cds-color-blue-100: #153d5c;
+  --cds-color-blue-90: #19496e;
+  --cds-color-blue-80: #1d5580;
+  --cds-color-blue-70: #226292;
+  --cds-color-blue-60: #266ea5;
+  --cds-color-blue-50: #2a7ab7; /* BCC Skydiver - accent color used for tertiary buttons and text links */
+  --cds-color-blue-40: #6aa2cd;
+  --cds-color-blue-30: #7fafd4;
+  --cds-color-blue-20: #bfd7e9;
+  --cds-color-blue-10: #eaf2f8; /* Background color used for info alert components. */
+  --cds-color-magenta-100: #43092d;
+  --cds-color-magenta-90: #5a0c3c;
+  --cds-color-magenta-80: #700f4b;
+  --cds-color-magenta-70: #87125a;
+  --cds-color-magenta-60: #9d1569;
+  --cds-color-magenta-50: #b21876; /* BCC 80's Hair - accent color used for in app user guides and help content */
+  --cds-color-magenta-40: #dd54a8;
+  --cds-color-magenta-30: #e582bf;
+  --cds-color-magenta-20: #f5a9d8;
+  --cds-color-magenta-10: #f7d4ea;
+  --cds-color-purple-100: #301533;
+  --cds-color-purple-90: #3a193d;
+  --cds-color-purple-80: #431d47;
+  --cds-color-purple-70: #4d2152;
+  --cds-color-purple-60: #56255c;
+  --cds-color-purple-50: #602966; /* BCC Wonka - accent color used on the top border color for CNC modals and help content */
+  --cds-color-purple-40: #906994;
+  --cds-color-purple-30: #a07fa3;
+  --cds-color-purple-20: #cfbfd1;
+  --cds-color-purple-10: #efeaf0;
+  --cds-color-teal-100: #014e4c;
+  --cds-color-teal-90: #015d5b;
+  --cds-color-teal-80: #016d6a;
+  --cds-color-teal-70: #027c79;
+  --cds-color-teal-60: #028c88; /* BCC Celeste - primary color used for buttons, sidenav links and icons. */
+  --cds-color-teal-50: #029b97;
+  --cds-color-teal-40: #4eb9b6;
+  --cds-color-teal-30: #67c3c1;
+  --cds-color-teal-20: #b3e1e0;
+  --cds-color-teal-10: #e6f5f5;
+  --cds-color-neutral-100: #173237; /* Stretto's primary brand color used in the logo and customer facing websites */
+  --cds-color-neutral-90: #2e474b;
+  --cds-color-neutral-80: #455b5f;
+  --cds-color-neutral-70: #5d7073;
+  --cds-color-neutral-60: #748487;
+  --cds-color-neutral-50: #8b999b;
+  --cds-color-neutral-40: #a2adaf;
+  --cds-color-neutral-30: #b9c2c3;
+  --cds-color-neutral-20: #d1d6d7;
+  --cds-color-neutral-10: #e8ebeb;
+  --cds-color-slate: #173237; /* Stretto's primary brand color used in the logo and customer facing websites */
+  --cds-color-orange: #fd7250; /* Stretto's secondary brand accent color used in the logo and customer facing websites */
+  --cds-color-gray: #f5f6fa;
+  --cds-color-white: #fff;
+  --cds-color-black: #000;
+  --cds-color-transparent: transparent;
+  --cds-breakpoint-xl: 90em; /* ~1440px */
+  --cds-breakpoint-lg: 75em; /* ~1200px */
+  --cds-breakpoint-md: 62em; /* ~992px */
+  --cds-breakpoint-sm: 48em; /* ~768px */
+  --cds-breakpoint-xs: 36em; /* ~576px */
+  --cds-border-width-responsive: clamp(0px, calc(100vw - 100%) * var(--cds-border-width-5), var(--cds-border-width-1));
+  --cds-border-width-5: 5px;
+  --cds-border-width-4: 4px;
+  --cds-border-width-3: 3px;
+  --cds-border-width-2: 2px;
+  --cds-border-width-1: 1px;
+  --cds-border-radius-responsive: clamp(0px, calc(100vw - 100%) * var(--cds-radius-round), var(--cds-radius-8));
+  --cds-border-radius-round: 1e5px;
+  --cds-border-radius-8: 8px;
+  --cds-border-radius-5: 5px;
+  --cds-border-radius-4: 4px;
+  --cds-border-radius-3: 3px;
+  --cds-border-radius-2: 2px;
+  --cds-border-radius-1: 1px;
+  --cds-border-radius-0: 0;
+  --cds-focus-color-error: var(--cds-color-red-20);
+  --cds-focus-color-warning: var(--cds-color-yellow-20);
+  --cds-focus-color-success: var(--cds-color-green-20);
+  --cds-focus-color-info: var(--cds-color-blue-20);
+  --cds-focus-color-help: var(--cds-color-magenta-20);
+  --cds-hover-color-error: var(--cds-color-red-70);
+  --cds-hover-color-warning: var(--cds-color-yellow-70);
+  --cds-hover-color-success: var(--cds-color-green-70);
+  --cds-hover-color-info: var(--cds-color-blue-70);
+  --cds-hover-color-help: var(--cds-color-magenta-70);
+  --cds-color-light: var(--cds-color-neutral-10);
+  --cds-color-dark: var(--cds-color-neutral-100);
+  --cds-color-error: var(--cds-color-red-50);
+  --cds-color-warning: var(--cds-color-yellow-50);
+  --cds-color-success: var(--cds-color-green-50);
+  --cds-color-info: var(--cds-color-blue-50);
+  --cds-color-help: var(--cds-color-magenta-50);
+  --cds-color-disabled: var(--cds-color-neutral-30);
+  --cds-color-muted: var(--cds-color-neutral-20);
+  --cds-color-accent: var(--cds-color-purple-50);
+  --cds-color-tertiary-darker: var(--cds-color-blue-90);
+  --cds-color-tertiary-dark: var(--cds-color-blue-70);
+  --cds-color-tertiary-base: var(--cds-color-blue-50);
+  --cds-color-tertiary-light: var(--cds-color-blue-30);
+  --cds-color-tertiary-lighter: var(--cds-color-blue-10);
+  --cds-color-secondary-darker: var(--cds-color-neutral-80);
+  --cds-color-secondary-dark: var(--cds-color-neutral-60);
+  --cds-color-secondary-base: var(--cds-color-neutral-40);
+  --cds-color-secondary-light: var(--cds-color-neutral-20);
+  --cds-color-secondary-lighter: var(--cds-color-neutral-10);
+  --cds-color-primary-darker: var(--cds-color-teal-90);
+  --cds-color-primary-dark: var(--cds-color-teal-70);
+  --cds-color-primary-base: var(--cds-color-teal-50);
+  --cds-color-primary-light: var(--cds-color-teal-30);
+  --cds-color-primary-lighter: var(--cds-color-teal-10);
+  --cds-border-color-light: var(--cds-color-neutral-30);
+  --cds-border-color-dark: var(--cds-color-neutral-100);
+  --cds-border-color-default: var(--cds-color-neutral-20);
+  --cds-text-color-error: var(--cds-color-error);
+  --cds-text-color-warning: var(--cds-color-warning);
+  --cds-text-color-success: var(--cds-color-success);
+  --cds-text-color-info: var(--cds-color-info);
+  --cds-text-color-help: var(--cds-color-help);
+  --cds-text-color-accent: var(--cds-color-accent);
+  --cds-text-color-tertiary: var(--cds-color-tertiary-base);
+  --cds-text-color-secondary: var(--cds-color-secondary-base);
+  --cds-text-color-primary: var(--cds-color-primary-base);
+  --cds-text-color-disabled: var(--cds-color-disabled);
+  --cds-text-color-muted: var(--cds-color-muted);
+  --cds-text-color-light: var(--cds-color-light);
+  --cds-text-color-dark: var(--cds-color-dark);
+  --cds-icon-color-error: var(--cds-color-error);
+  --cds-icon-color-warning: var(--cds-color-warning);
+  --cds-icon-color-success: var(--cds-color-success);
+  --cds-icon-color-info: var(--cds-color-info);
+  --cds-icon-color-accent: var(--cds-color-accent);
+  --cds-icon-color-help: var(--cds-color-help);
+  --cds-icon-color-light: var(--cds-color-light);
+  --cds-icon-color-disabled: var(--cds-color-disabled);
+  --cds-icon-color-dark: var(--cds-color-dark);
+  --cds-icon-color-tertiary: var(--cds-color-tertiary-base);
+  --cds-icon-color-secondary: var(--cds-color-secondary-base);
+  --cds-icon-color-primary: var(--cds-color-primary-base);
+  --cds-bg-color-error: var(--cds-color-error);
+  --cds-bg-color-warning: var(--cds-color-warning);
+  --cds-bg-color-success: var(--cds-color-success);
+  --cds-bg-color-info: var(--cds-color-info);
+  --cds-bg-color-help: var(--cds-color-help);
+  --cds-bg-color-disabled: var(--cds-color-disabled);
+  --cds-bg-color-muted: var(--cds-color-muted);
+  --cds-bg-color-accent: var(--cds-color-accent);
+  --cds-bg-color-tertiary: var(--cds-color-tertiary-base);
+  --cds-bg-color-secondary: var(--cds-color-secondary-base);
+  --cds-bg-color-primary: var(--cds-color-primary-base);
+  --cds-bg-color-light: var(--cds-color-light);
+  --cds-bg-color-dark: var(--cds-color-dark);
+  --cds-border-color-disabled: var(--cds-color-disabled);
+  --cds-border-color-error: var(--cds-color-error);
+  --cds-border-color-warning: var(--cds-color-warning);
+  --cds-border-color-success: var(--cds-color-success);
+  --cds-border-color-info: var(--cds-color-info);
+  --cds-border-color-help: var(--cds-color-help);
+  --cds-border-color-accent: var(--cds-color-accent);
+  --cds-border-color-tertiary: var(--cds-color-tertiary-base);
+  --cds-border-color-secondary: var(--cds-color-secondary-base);
+  --cds-border-color-primary: var(--cds-color-primary-base);
+}
+```

@@ -1,0 +1,58 @@
+import { Icon } from '@iconify/react';
+import { Story, Controls, Meta } from '@storybook/blocks';
+import * as PanelStories from '../panel/Panel.stories';
+import * as GridStories from './Grid.stories';
+
+<Meta of={GridStories} />
+
+# Grid
+
+`<Grid/>` is intended to be used as a layout tool for positioning components and content.
+It's default display property is set to `display: grid` and renders a div element.
+Use it in conjunction with the `<GridItem>` component to have full control over page layouts.
+
+## Usage
+
+> The `<Grid>` component uses standard CSS grid properties. [Learn more. <Icon icon="mdi:open-in-new" />](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout" 'title')
+
+> The `<Grid>` component has a `display: grid` property applied by default, so all direct children become grid items.
+
+> <Icon icon="mdi:lightbulb-on" color="var(--cds-color-teal-50)" /> Tip: Use the Grid Inspector in Chrome Dev Tools to see
+> how grid items are positioned against the lines of the grid.
+
+1. Import the grid component into your `.jsx` or `.tsx` file:
+
+```jsx
+import { Grid } from '@stretto/cds-ui/layout';
+```
+
+2. Wrap the content you want to position with the `<Grid>` component. In this example, it's 4 styles div containers.
+
+   <Story of={GridStories.Basic} />
+
+3. Use the `columns` prop to specify the number columns needed.
+
+```jsx
+<Grid columns={4}>// Content goes here.</Grid>
+```
+
+3. Use the `rows` prop to specify the number of rows needed.
+
+```jsx
+<Grid columns={6} rows={4}>
+  // Content goes here.
+</Grid>
+```
+
+## Using the Grid in Panels
+
+1. This example shows a 4 column grid with 3 rows. The paragraph text spans 4 columns and the text fields span 2 columns.
+
+> <Icon icon="mdi:lightbulb-on" color="var(--cds-color-teal-50)" /> Tip: Click the show code button to your bottom right
+> to review or copy.
+
+    <Story of={PanelStories.WithSectionAlert} />
+
+## Component API
+
+    <Controls />

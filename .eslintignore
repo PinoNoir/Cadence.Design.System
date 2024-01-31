@@ -1,0 +1,13 @@
+/.storybook/
+/packages/*/storybook-static/
+/packages/*/config/
+/packages/*/coverage/
+/packages/*/lib/
+/packages/*/public/
+/packages/*/styled-system/
+/packages/*/node_modules/
+/packages/cds-scss/src
+/packages/cds-preset/dist
+/packages/cds-foundations/src
+/apps/**/*
+babel.config.js

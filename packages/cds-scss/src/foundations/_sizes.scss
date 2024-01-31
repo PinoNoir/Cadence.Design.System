@@ -1,0 +1,40 @@
+@use 'tokens' as *;
+
+// Sass Map for utility classes
+$sizes: (
+  '4': 0.25rem,
+  // ~4px
+  '8': 0.5rem,
+  // ~8px
+  '14': 0.875rem,
+  // ~14px
+  '16': 1rem,
+  // ~16px
+  '20': 1.25rem,
+  // ~20px
+  '24': 1.5rem,
+  // ~24px
+  '28': 1.75rem,
+  // ~28px Height used for small buttons
+  '32': 2rem,
+  // ~32px Height used for default buttons
+  '36': 2.25rem,
+  // ~36px
+  '40': 2.5rem,
+  // ~40px Height used for large buttons
+  '48': 3rem,
+  // ~48px
+);
+
+// For use in the code base
+$size-4: var(--cds-size-4);
+$size-8: var(--cds-size-8);
+$size-14: var(--cds-size-14);
+$size-16: var(--cds-size-16);
+$size-20: var(--cds-size-20);
+$size-24: var(--cds-size-24);
+$size-28: var(--cds-size-28);
+$size-32: var(--cds-size-32);
+$size-36: var(--cds-size-36);
+$size-40: var(--cds-size-40);
+$size-48: var(--cds-size-48);

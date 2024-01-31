@@ -1,0 +1,64 @@
+@use 'sass:selector';
+@use '../foundations' as *;
+
+// Utility classes for text styles and alignment
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+// Text color utility classes from Color System
+
+.text-color-primary {
+  color: var(--cds-text-color-primary);
+}
+
+.text-color-link {
+  color: var(--cds-text-color-link);
+}
+
+.text-color-link:active {
+  color: var(--cds-text-color-link-active);
+}
+
+.text-color-light {
+  color: var(--cds-text-color-light);
+}
+
+.text-color-dark {
+  color: var(--cds-text-color-dark);
+}
+
+// Text color utility classes for System Feedback
+
+.text-color-info {
+  color: var(--cds-text-color-info);
+}
+
+.text-color-accent {
+  color: var(--cds-text-color-accent);
+}
+
+.text-color-help {
+  color: var(--cds-text-color-help);
+}
+
+.text-color-success {
+  color: var(--cds-text-color-success);
+}
+
+.text-color-warning {
+  color: var(--cds-text-color-warning);
+}
+
+.text-color-error {
+  color: var(--cds-text-color-error);
+}

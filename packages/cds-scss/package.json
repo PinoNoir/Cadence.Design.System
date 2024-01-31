@@ -1,0 +1,48 @@
+{
+  "name": "@stretto/cds-scss",
+  "description": "A collection of reusable CSS styles for Stretto's digital products built with SASS.",
+  "version": "1.4.4",
+  "packageManager": "pnpm@8.6.0",
+  "publishConfig": {
+    "registry": "https://nexus.stretto.com/repository/npm-releases/"
+  },
+  "author": {
+    "name": "Nicholas Pino",
+    "email": "nicholas.pino@stretto.com"
+  },
+  "license": "MIT",
+  "keywords": [
+    "css",
+    "library",
+    "scss",
+    "styles"
+  ],
+  "main": "./lib/global.css",
+  "scripts": {
+    "build": "pnpm --filter ../cds-foundations run build-tokens && pnpm compile-css && pnpm prefix-css && pnpm compressed-css",
+    "clean": "rimraf ./lib",
+    "compile-css": "sass --no-source-map src/global.scss:lib/global.css --style expanded",
+    "compressed-css": "sass --no-source-map lib/global.prefixed.css:lib/global.min.css --style compressed",
+    "lint": "stylelint ./**/*.scss",
+    "lint:fix": "stylelint ./**/*.scss --fix",
+    "prefix-css": "postcss lib/global.css -u autoprefixer -b \"last 10 versions\" -o lib/global.prefixed.css",
+    "watch": "sass --watch src/:lib/"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.31",
+    "postcss-cli": "^10.1.0",
+    "rimraf": "^5.0.5",
+    "sass": "^1.69.5",
+    "stylelint": "^15.11.0",
+    "stylelint-config-standard-scss": "^10.0.0",
+    "stylelint-scss": "^5.3.1",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "@stretto/cds-foundations": "workspace:^"
+  },
+  "lint-staged": {
+    "*.scss": "pnpm lint:fix"
+  }
+}

@@ -1,0 +1,35 @@
+import { Canvas, Controls, Meta } from '@storybook/blocks';
+import * as GridItemStories from './GridItem.stories';
+import { Icon } from '@iconify/react';
+
+<Meta of={GridItemStories} />
+
+# Grid Item
+
+`<GridItem>` is intended to be used in conjunction with the `<Grid>` component.
+It allows control over the number of columns and rows a child element will span across the defined values of the `<Grid>`
+as well as positioning within the grid using the `alignItems` and `justifyContent` props.
+
+## Usage
+
+1. Import both components into your `.jsx` or `.tsx` file:
+
+```jsx
+import { Grid, GridItem } from '@stretto/cds-ui';
+```
+
+2. Specify the number of `columns` and/or `rows` for the grid and insert the `<GridItem>` component.
+
+```jsx
+<Grid columns={12} rows={3}>
+  <GridItem as="div">// Content goes here.</GridItem>
+</Grid>
+```
+
+3. Specify how many columns the `<GridItem>` will span using the `colSpan` prop.
+
+<Canvas of={GridItemStories.Default} />
+
+## Component API
+
+<Controls />

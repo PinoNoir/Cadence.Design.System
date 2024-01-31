@@ -1,0 +1,29 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "baseUrl": ".",
+    "module": "ESNext",
+    "target": "ESNext",
+    "moduleResolution": "Node",
+    "isolatedModules": true,
+    "resolveJsonModule": true,
+    "sourceMap": true,
+    "declaration": true,
+    "declarationMap": true,
+    "noEmitOnError": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "types": [],
+    "jsx": "preserve",
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitAny": false,
+    "noUncheckedIndexedAccess": true,
+    "paths": {
+      "@stretto/apps/*": ["apps/react-sandbox/src/*"],
+      "@stretto/packages/cds-ui/*": ["cds-ui/src/*"],
+      "@stretto/packages/cds-preset/*": ["cds-preset/src/*"],
+      "@stretto/packages/cds-foundations/*": ["cds-foundations/src/*"],
+      "@stretto/packages/cds-scss/*": ["cds-scss/src/*"]
+    }
+  }
+}

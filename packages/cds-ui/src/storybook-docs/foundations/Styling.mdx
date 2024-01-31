@@ -1,0 +1,84 @@
+import { Meta } from '@storybook/blocks';
+import { Icon } from '@iconify/react';
+
+<Meta title="Foundations/Styling" name="Styling" />
+
+# Styling
+
+> Applications using Cadence Design System can use a set of pre-defined design tokens or CSS variables. Reference the Design Tokens section to learn more.
+
+## Standard CSS
+
+> Applications using a standard css solution can install the `@stretto/cds-scss` package.
+
+### Referencing Global CSS Variables
+
+1. Install `@stretto/cds-scss` in your project by running the following command:
+
+```jsx
+npm install @stretto/cds-scss
+```
+
+2. Import the `global.css` file from the library's root entry:
+
+```jsx
+// Main.tsx
+import '@stretto/cds-scss/lib/global.css';
+```
+
+3. Reference the css variable in your CSS stylesheet, CSS Module, or use a CSS-in-JS solution.
+
+> <Icon icon="mdi:lightbulb-on" color="var(--cds-color-teal-50)" /> Tip: Install the [CSS Var Complete](https://marketplace.visualstudio.com/items?itemName=phoenisx.cssvar
+> 'title') or [CSS Custom Properties](https://marketplace.visualstudio.com/items?itemName=Tock.vscode-css-custom-properties
+> 'title') VS/VSCode extensions to use auto-complete for our design tokens!
+
+```css
+body {
+  font-family: var(--cds-font-family-body);
+}
+```
+
+### Overriding Global CSS Variables (Locally Scoped CSS Variables)
+
+> To override global custom properties, define the new value on the :root pseudo-class, so that it can be applied globally:
+
+```css
+:root {
+  --cds-color-bg-base: #f5f6fa;
+}
+
+body {
+  background-color: var(--cds-color-bg-base);
+}
+```
+
+## CSS-in-JS
+
+> Applications using Cadence Design System's component library can use the `<Box>` component to access our custom styling API.
+
+### Polymorphic Box Component
+
+1. Install `@stretto/cds-ui` in your project by running the following command:
+
+```jsx
+npm install @stretto/cds-ui
+```
+
+2. Import the `<Box>` component into your `.jsx` or `.tsx` file:
+
+```jsx
+// App.tsx
+import { Box } from '@stretto/cds-ui';
+```
+
+3. Use in your application:
+
+> This component is built with vanilla-extract + Typescript so you'll have full access to the CDS styling API with auto-complete for design tokens and CSS props!
+
+> <Icon icon="mdi:lightbulb-on" color="var(--cds-color-teal-50)" /> Tip: The `<Box>` component is rendered as a `<div>` element by default. Use the `as` prop to specify any valid HTML element:
+
+```jsx
+function App() {
+  return <Box as="header" marginBottom='40px'>
+};
+```

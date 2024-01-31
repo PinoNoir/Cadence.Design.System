@@ -1,0 +1,69 @@
+trigger:
+  - main
+
+pool: 'AWSAgents'
+
+# Pipeline stages
+stages:
+  - stage: Test
+    displayName: Chromatic Testing
+    # Job list
+    jobs:
+      - job: Chromatic_Deploy
+        displayName: Install packages and publish Storybook
+        # List of steps
+        steps:
+          - checkout: self
+            displayName: 'Get full Git history'
+            fetchDepth: 0
+          # Installs and configures Node environment
+          - task: NodeTool@0
+            inputs:
+              versionSpec: '18.x'
+            displayName: 'Install Node.js'
+          - script: |
+              corepack enable
+              corepack prepare pnpm@latest-8 --activate
+              pnpm config set store-dir $(pnpm_config_cache)
+            displayName: 'Setup pnpm'
+          - script: |
+              pnpm install
+              pnpm build
+            displayName: 'pnpm install and build'
+            # Adds Chromatic as a step
+          - task: CmdLine@2
+            displayName: Install Dependencies
+            inputs:
+              # Runs Pnpm Install in cds-ui directory
+              script: pnpm install
+          - task: CmdLine@2
+            displayName: Build Dependencies
+            inputs:
+              # Runs Pnpm Build in root directory
+              script: pnpm build
+          - task: CmdLine@2
+            displayName: Publish cds-ui to Chromatic
+            inputs:
+              # Runs Chromatic
+              script: cd packages/cds-ui && pnpm chromatic
+            env:
+              CHROMATIC_PROJECT_TOKEN: $(CHROMATIC_PROJECT_TOKEN)
+          - task: CopyFiles@2
+            displayName: Copy Version Info
+            inputs:
+              SourceFolder: '$(System.DefaultWorkingDirectory)/packages/cds-ui'
+              Contents: 'package.json'
+              TargetFolder: '$(System.DefaultWorkingDirectory)/packages/cds-ui/storybook-static'
+          - task: PublishBuildArtifacts@1
+            inputs:
+              pathtoPublish: '$(System.DefaultWorkingDirectory)/packages/cds-ui/storybook-static' # Replace with the actual path to your build output
+              artifactName: 'CadenceDesignSystem'
+            displayName: 'Publish Artifacts'
+          - task: S3Upload@1
+            inputs:
+              regionName: 'us-east-2'
+              bucketName: 'cadence-design-system'
+              sourceFolder: '$(System.DefaultWorkingDirectory)/packages/cds-ui/storybook-static'
+              globExpressions: '**'
+              createBucket: true
+            enabled: false

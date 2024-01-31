@@ -1,0 +1,14 @@
+{
+  // extends base config to share compilerOptions, etc
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    // ensures this config is not used for a build accidentally
+    "noEmit": true
+  },
+  "include": [
+    // whatever paths you intend to lint
+    "packages/**/*",
+    "scripts/**/*",
+    "apps/**/*"
+  ]
+}

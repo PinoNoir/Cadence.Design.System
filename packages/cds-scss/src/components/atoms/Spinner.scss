@@ -1,0 +1,54 @@
+@use '../../foundations' as *;
+
+// Base styling for BCC Loading Spinner
+
+.loading-spinner {
+  animation: spin 0.45s cubic-bezier(0.25, 0.3, 0.3, 0.25) infinite;
+  border: 3px solid $cds-color-neutral-20;
+  border-radius: 50%;
+  border-right-color: $cds-border-color-primary;
+  height: 1.75rem;
+  margin-right: $cds-space-12;
+  width: 1.75rem;
+
+  @keyframes spin {
+
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  &__text {
+    color: $cds-color-neutral-70;
+    font-weight: $cds-font-weight-medium;
+    letter-spacing: 0.05rem;
+  }
+  &__box {
+    align-items: center;
+    background-color: $cds-color-secondary-base;
+    border: 1px solid $cds-color-neutral-20;
+    border-radius: $cds-border-radius-large;
+    box-shadow:
+      0 3px 4px rgb(93 113 116 / 25%),
+      0 1px 4px rgb(93 113 116 / 25%);
+    display: flex;
+    margin: $cds-space-16;
+    padding-block: $cds-space-16;
+    padding-inline: $cds-space-32;
+  }
+}
+
+.overlay {
+  align-items: center;
+  background: $cds-color-white;
+  opacity: 0.8;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}

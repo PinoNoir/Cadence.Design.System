@@ -1,0 +1,44 @@
+import { Meta, IconGallery, IconItem } from '@storybook/blocks';
+import { Icon as IconExample } from '../../components/icon';
+import { iconNames } from '../../types/icon-names';
+
+<Meta title="Foundations/Iconography" />
+
+# Iconography
+
+> CDS uses Material Design Icons for all SVG icons used in the application.
+
+<IconGallery>
+  {iconNames.map((name) => (
+    <IconItem key={name} name={name}>
+      <IconExample name={name} />
+    </IconItem>
+  ))}
+</IconGallery>
+
+## Usage
+
+1. Install the `@iconify/react` package by running the following command:
+
+```bash
+npm install --save-dev @iconify/react
+```
+
+2. Import the `<Icon/>` component from:
+
+```jsx
+// App.tsx
+import { Icon } from '@iconify/react';
+```
+
+3. Use the [icon prop](https://iconify.design/docs/icon-components/react/#icon 'title') to specify the icon name. Intellisense should provide a list of available icons. Icon names should also be available in the figma design spec/prototype.
+
+```jsx
+<Icon name="mdi-light:home" />
+```
+
+## Tips
+
+- Inspect icons used in Figma files for icon names, color, and sizing.
+- If further customization is needed, use the [props](https://iconify.design/docs/icon-components/react/#properties 'title') the `<Icon/>` component provides.
+- Use the [Material Design Icons Iconify API](https://icon-sets.iconify.design/mdi/ 'title') as a reference.
